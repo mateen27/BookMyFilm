@@ -1,0 +1,140 @@
+create database bookmyticket;
+use bookmyticket;
+
+create table adminlogin(AdminID varchar(10) NOT NULL , AdminPassword varchar(30) NOT NULL);
+
+insert into adminlogin values('admin' , 'admin@123');
+
+create table movieDetails(
+MovieID int(3) NOT NULL PRIMARY KEY, 
+MovieName varchar(400) NOT NULL ,
+MovieCategory varchar(400) NOT NULL ,
+MovieBanner varchar(500) NOT NULL ,
+MovieRating varchar(100) ,
+MovieDuration varchar(100) ,
+MovieReleaseDate varchar(100) ,
+MovieLogo varchar(500) ,
+MovieCast varchar(500) , 
+MovieTrailer varchar(500)
+);
+
+create table shows(
+movieID int NOT NULL ,
+movieName varchar(500) ,
+showID int PRIMARY KEY ,
+movieNormalFare int(4) , 
+movieExecutiveFare int(4) ,
+moviePremiumFare int(4) ,
+movieTimingsOne varchar(500) ,
+movieTimingsTwo varchar(500) ,
+movieTimingsThree varchar(500) ,
+movieTimingsFour varchar(500) ,
+movieTimingsFive varchar(500) ,
+movieTimingsSix varchar(500) ,
+dateOfShowOne varchar(200) ,
+dateOfShowTwo varchar(200) ,
+dateOfShowThree varchar(200) ,
+audiNumber varchar(50)
+);
+
+create table booking(
+MovieID varchar(100) ,
+bookingID int(3),
+showID int(3) ,
+audiNumber varchar(50) ,
+MovieName varchar(100),
+MovieTiming varchar(100),
+MovieDate varchar(100),
+totalBookedSeats varchar(400) ,
+totalFare varchar(500) ,
+RSeatOne varchar(100),
+RSeatTwo varchar(100),
+RSeatThree varchar(100),
+RSeatFour varchar(100),
+RSeatFive varchar(100),
+RSeatSix varchar(100),
+RSeatSeven varchar(100) , 
+PSeatOne varchar(100),
+PSeatTwo varchar(100),
+PSeatThree varchar(100),
+PSeatFour varchar(100),
+PSeatFive varchar(100),
+PSeatSix varchar(100),
+PSeatSeven varchar(100),
+PSeatEight varchar(100),
+PSeatNine varchar(100),
+PSeatTen varchar(100),
+PSeatEleven varchar(100),
+PSeatTwelve varchar(100),
+PSeatThirteen varchar(100),
+PSeatFourteen varchar(100),
+PSeatFifteen varchar(100),
+PSeatSixteen varchar(100),
+PSeatSeventeen varchar(100),
+PSeatEighteen varchar(100),
+PSeatNineteen varchar(100),
+PSeatTwenty varchar(100),
+PSeatTwentyOne varchar(100),
+PSeatTwentyTwo varchar(100),
+PSeatTwentyThree varchar(100),
+PSeatTwentyFour varchar(100),
+CSeatOne varchar(100),
+CSeatTwo varchar(100),
+CSeatThree varchar(100),
+CSeatFour varchar(100),
+CSeatFive varchar(100),
+CSeatSix varchar(100),
+CSeatSeven varchar(100),
+CSeatEight varchar(100),
+CSeatNine varchar(100),
+CSeatTen varchar(100),
+CSeatEleven varchar(100),
+CSeatTwelve varchar(100),
+CSeatThirteen varchar(100),
+CSeatFourteen varchar(100),
+CSeatFifteen varchar(100),
+CSeatSixteen varchar(100),
+CSeatSeventeen varchar(100) , 
+CSeatEighteen varchar(100)
+);
+
+create table bookedSeats(
+MovieID varchar(100) ,
+MovieName varchar(500) , 
+bookingID int(3),
+showID int(3) ,
+audiNumber varchar(50) ,
+MovieTiming varchar(100) ,
+MovieDate varchar(100) ,
+totalBookedSeats varchar(400) ,
+totalFare varchar(500) ,
+seatsBooked varchar(500) , 
+Fare varchar(100) , 
+PayAfterWatch varchar(100)
+);
+
+create table movieDetailsPageTwo(
+MovieID varchar(100) NOT NULL PRIMARY KEY ,
+NormalFare varchar(100) NOT NULL , 
+ExecutiveFare varchar(100) NOT NULL ,
+PremiumFare varchar(100) NOT NULL , 
+SessionOne varchar(500),
+SessionTwo varchar(500),
+SessionThree varchar(500),
+SessionFour varchar(500),
+SessionFive varchar(500),
+SessionSix varchar(500),  
+MovieAvailableDateOne varchar(500) NOT NULL ,
+MovieAvailableDateTwo varchar(500) NOT NULL ,
+MovieAvailableDateThree varchar(500) NOT NULL ,
+AudiDetails varchar(50) NOT NULL
+);
+
+drop database bookmyticket;
+drop table movieDetails;
+drop table shows;
+drop table booking;
+drop table movieDetailsPageTwo;
+drop table bookedseats;
+
+select * from movieDetailsPageOne;
